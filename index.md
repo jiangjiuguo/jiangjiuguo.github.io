@@ -1,37 +1,48 @@
-## Welcome to GitHub Pages
+## 蒋九国
+[登录页面](https://jiangjiuguo.github.io/login)
 
-You can use the [editor on GitHub](https://github.com/jiangjiuguo/jiangjiuguo.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+### （第一步）新建仓库
+#### 新建仓库步骤省略，最后我们得到一个仓库地址：
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/jiangjiuguo/jiangjiuguo.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+https://github.com/wangle1218/×××××××××.git
+```
+### （第二步）进入要上传的文件夹，初始化上传文件夹仓库
+```
+$ cd ../python/machineLearningCode/
+$ git init
+```
+### （第三步）添加所有文件到git
+```
+$ git add .
+$ git commit -m "first commit
+```
+### （第四步）连接到guthub仓库
+```
+$ git remote add origin https://github.com/wangle1218/********.git
+```
+#### 如果不是第一次上传，可能会提示一下信息：
+```
+fatal: 远程 origin 已经存在。
+```
+#### 这时只需要将远程配置删除，重新添加即可；
+```
+$ git remote rm origin
+$ git remote add origin https://github.com/wangle1218/********.git
+```
+### （第五步）输入“git push -u origin master”，上传项目到Github。
+#### 这里会要求输入Github的账号密码，按要求输入就可以。
+```
+$ git push -u origin master
+```
+#### 如果提示错误：
+```
+error: 无法推送一些引用到 'https://github.com/wangle1218/*********.git'
+提示：更新被拒绝，因为远程仓库包含您本地尚不存在的提交。这通常是因为另外
+提示：一个仓库已向该引用进行了推送。再次推送前，您可能需要先整合远程变更
+提示：（如 'git pull ...'）。
+提示：详见 'git push --help' 中的 'Note about fast-forwards' 小节。
+```
+#### 则可以尝试强行上传：
+```
+$ git push -u origin +master
+```
