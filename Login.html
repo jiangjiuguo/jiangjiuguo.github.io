@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://jiangjiuguo.github.io/jquery.js"></script>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            background: url("https://i0.hdslb.com/bfs/article/dd9f6551c5b933c9ec3a60a2e0b6b544ad556baa.jpg@942w_531h_progressive.webp");
+            background-size: 100% 100%;
+            background-position: center center;
+            overflow: auto;
+        }
+
+        span {
+
+            line-height: 50%;
+            padding: 10px 30px 10px 30px;
+            border-radius: 100px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            background-color: #4158D0;
+            background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
+            cursor: pointer;
+        }
+
+        div {
+            float: right;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Button-->
+    <div id="header">
+        <!-- 登录-->
+        <span id="signIn">Sign in</span>
+        <!-- 注册-->
+        <span id="signUp">Sign up</span>
+    </div>
+
+    <div id="mainbody">
+
+    </div>
+
+    <script>
+        $('#signIn').click(function () {
+            alert("aa");
+        });
+    </script>
+</body>
+
+</html>
