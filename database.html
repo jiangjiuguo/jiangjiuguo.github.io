@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        list-style-type: none;
+    }
+</style>
+
+<body bgcolor="aliceblue">
+    <table align="center" border="1" width="60%" cellspacing="0" style="text-align: center;background-color: white;">
+        <thead>
+            <tr>
+                <th colspan="2">
+                    <h1>MYSQL与SQL命令大全</h1>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <h2>命令</h2>
+                </th>
+                <th>
+                    <h2>意思</h2>
+                </th>
+            </tr>
+        </thead>
+        <!-- content模板
+            <tr>
+            <td><p></p></td>
+            <td><p></p></td>
+            </tr>
+        -->
+        <tr>
+            <td>
+                <p>net start mysql</p>
+            </td>
+            <td>
+                <p>启动mysql服务</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>net stop mysql</p>
+            </td>
+            <td>
+                <p>停止mysql服务</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>mysql -h主机地址 -u用户名 －p用户密码</p>
+            </td>
+            <td>
+                <p>连接mysql</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>exit</p>
+            </td>
+            <td>
+                <p>断开连接</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>show databases;</p>
+            </td>
+            <td>
+                <p>显示数据库</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>show tables;</p>
+            </td>
+            <td>
+                <p>显示数据表</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>describe 表名;</p>
+            </td>
+            <td>
+                <p>显示表结构</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>create database 库名;</p>
+            </td>
+            <td>
+                <p>创建库</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>drop database 库名;</p>
+            </td>
+            <td>
+                <p>删除库</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>use 库名;</p>
+            </td>
+            <td>
+                <p>使用库</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>create table 表名 (字段设定列表
+                <ul>
+                    <li>
+                        <span>auto_increment：</span>
+                        <span>定义列为自增的属性<br />一般用于主键<br />数值会自动加1</span>
+                    </li>
+                    <li>
+                        <span><br />primary key(字段)：</span>
+                        <span>关键字用于定义列为主键<br />您可以使用多列来定义主键<br />列间以逗号分隔</span>
+                    </li>
+                    <li>
+                        <span><br />engine：</span>
+                        <span>设置存储引擎<br /></span>
+                        <span><br />charset：</span>
+                        <span>设置编码</span>
+                    </li>
+                </ul>
+                );</p>
+            </td>
+            <td>
+                <p>创建表</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>drop table 表名;</p>
+            </td>
+            <td>
+                <p>删除表</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>alter table t1 rename t2</p>
+            </td>
+            <td>
+                <p>修改表</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>select * from 表名;</p>
+            </td>
+            <td>
+                <p>查询表</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>delete from 表名;</p>
+            </td>
+            <td>
+                <p>清空表</p>
+            </td>
+        </tr>
+        <tfoot>
+            <tr>
+                <td colspan="2" align="right">蒋九国</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>
