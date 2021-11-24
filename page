@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0px;
+        margin: 0px;
+        list-style: none;
+    }
+
+    #main {
+        width: 100%;
+        height: 500px;
+    }
+
+    #head {
+        width: 100%;
+        height: 40px;
+        background-color: black;
+    }
+
+    #body {
+        width: 100%;
+        height: 450px;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    #head ul {
+        float: left;
+    }
+
+    #head ul li {
+        height: 40px;
+        padding: 0px 30px 0px 30px;
+        color: white;
+        float: left;
+        cursor: pointer;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        font-size: 13px;
+    }
+
+    #head ul li:hover {
+        background-color: pink;
+    }
+
+    #body #point {
+        width: 6.2%;
+        opacity: 0.7;
+        background-color: gray;
+        padding: 0px 25px 0px 25px;
+        border-radius: 20px;
+        margin: auto;
+        position: relative;
+        top: 400px;
+    }
+
+    #body #point ul li {
+        width: 10px;
+        height: 10px;
+        cursor: pointer;
+        display: inline-block;
+        background-color: black;
+        border-radius: 100%;
+    }
+
+    #xlcd {
+        width: 100;
+        float: left;
+        background-color: black;
+        display: inline-block;
+        cursor: pointer;
+        font-size: 13px;
+    }
+
+    #a {
+        color: white;
+        padding: 11.5px 20px 10px 20px;
+    }
+
+    #b {
+        color: white;
+        display: none;
+    }
+
+    dl {
+        margin-left: 10px;
+    }
+
+    dl dd a {
+        margin-right: 15px;
+    }
+</style>
+
+<body>
+    <div id="main">
+        <div id="head">
+            <div id="xlcd">
+                <div id="a">全部商品分类</div>
+                <div id="b">
+                    <dl>
+                        <dt>鲜花</dt>
+                        <dd><a>a</a><a>b</a><a>a</a><a>b</a></dd>
+                    </dl>
+                    <hr />
+                    <dl>
+                        <dt>蛋糕</dt>
+                        <dd><a>a</a><a>b</a><a>a</a><a>b</a></dd>
+                    </dl>
+                    <hr />
+                    <dl>
+                        <dt>粑粑</dt>
+                        <dd><a>a</a><a>b</a><a>a</a><a>b</a></dd>
+                    </dl>
+                </div>
+            </div>
+            <ul>
+                <li>首页</li>
+                <li>节日礼物</li>
+                <li>生日礼物</li>
+                <li>蛋糕</li>
+                <li>商务礼物</li>
+                <li>个性定制</li>
+                <li>鲜花</li>
+            </ul>
+        </div>
+        <div id="body">
+            <div id="point">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    var body = document.getElementById('body');
+    var point = document.getElementById('point');
+    var li = point.querySelectorAll('li');
+    var array = ['http://lmg.jj20.com/up/allimg/tp05/19100120461512E-0-lp.jpg',
+        ' https://up.enterdesk.com/edpic_source/53/0a/da/530adad966630fce548cd408237ff200.jpg',
+        'https://file02.16sucai.com/d/file/2014/0829/b871e1addf5f8e96f3b390ece2b2da0d.jpg',
+        'http://img.pconline.com.cn/images/upload/upc/tx/photoblog/1610/20/c16/28666491_1476977210753.jpg',
+        'http://lmg.jj20.com/up/allimg/tp05/19100122420C335-0-lp.jpg',
+        'https://up.enterdesk.com/edpic/42/64/cf/4264cfdd0933249ad26be343ceaeae01.jpg',
+        'coral'];
+    body.style.backgroundImage = 'url(' + array[0] + ')';
+    for (let i = 0; i < li.length; i++) {
+        li[i].onclick = function () {
+            body.style.backgroundImage = 'url(' + array[i] + ')';
+        }
+    }
+</script>
+<script>
+    var xlcd = document.getElementById('xlcd');
+    var a = document.getElementById('a');
+    var b = document.getElementById('b');
+    xlcd.onmousemove = function () {
+        b.style.display = 'block';
+        a.style.backgroundColor = 'pink';
+    }
+    xlcd.onmouseout = function () {
+        b.style.display = 'none';
+        a.style.backgroundColor = '';
+    }
+</script>
+
+</html>
