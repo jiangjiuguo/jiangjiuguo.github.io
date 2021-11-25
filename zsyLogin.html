@@ -87,7 +87,7 @@
         </div>
         <div id="login">
             <div id="cha">✨</div>
-            <form action="https://bruno-simon.com/">
+            <form action="#" id="form">
                 <div>
                     <label for="accout">账号：</label> <input type="text" id="accout" class="txt" />
                 </div>
@@ -95,7 +95,7 @@
                     <label for="pass">密码：</label> <input type="password" id="pass" class="txt" />
                 </div>
                 <div>
-                    <input type="submit" value="登录" />
+                    <input type="submit" value="登录" id="dl" />
                     <input type="reset" value="重置" />
                     <input type="button" value="取消" id="cancel" />
                 </div>
@@ -116,6 +116,20 @@
     cancel.onclick = function () {
         login.style.display = 'none';
         signIn.style.display = 'block';
+    }
+</script>
+<script>
+    var form = document.getElementById('form');
+    var dl = document.getElementById('dl');
+    var accout = document.getElementById('accout');
+    var pass = document.getElementById('pass');
+    dl.onclick = function () {
+        if (accout.value == '2854579178' || pass.value == 'gaoya520.') {
+            form.action = 'https://bruno-simon.com/'
+            alert('登录成功');
+        } else {
+            alert('登陆失败');
+        }
     }
 </script>
 
