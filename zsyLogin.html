@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0px;
+        margin: 0px;
+        list-style: none;
+        outline: none;
+    }
+
+
+    #main {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        background-image: url(http://pic1.win4000.com/wallpaper/2020-06-12/5ee34f1a10741.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+
+    #login {
+        padding: 5% 6% 5% 5%;
+        align-self: center;
+        justify-content: center;
+        background-color: black;
+        opacity: 0.7;
+        display: flex;
+        display: none;
+    }
+
+    #login form {
+        align-self: center;
+        color: white;
+    }
+
+    #login form div:nth-child(2) {
+        margin: 5% 0% 0% 0%;
+    }
+
+    #login form div:nth-child(3) {
+        margin: 5% 0% 0% 23.5%;
+    }
+
+    #login form .txt {
+        height: 20px;
+        border-radius: 100px;
+        padding-left: 10px;
+    }
+
+    #login form div:nth-child(3) input {
+        width: 50px;
+        border-radius: 100px;
+        background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+        cursor: pointer;
+    }
+
+    #header {
+        align-self: center;
+        justify-content: center;
+    }
+
+    #header #signIn {
+        line-height: 50%;
+        padding: 15px 25px 15px 25px;
+        border-radius: 50%;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        background-color: #4158D0;
+        background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div id="main">
+        <div id="header">
+            <!-- 登录-->
+            <span id="signIn">Sign in</span>
+        </div>
+        <div id="login">
+            <div id="cha">×</div>
+            <form action="https://wwww.baidu.com">
+                <div>
+                    <label for="accout">账号：</label> <input type="text" id="accout" class="txt" />
+                </div>
+                <div>
+                    <label for="pass">密码：</label> <input type="password" id="pass" class="txt" />
+                </div>
+                <div>
+                    <input type="submit" value="登录" />
+                    <input type="reset" value="重置" />
+                    <input type="button" value="取消" id="cancel" />
+                </div>
+            </form>
+
+        </div>
+    </div>
+</body>
+
+<script>
+    var signIn = document.getElementById('signIn');
+    var cancel = document.getElementById('cancel');
+    var login = document.getElementById('login');
+    signIn.onclick = function () {
+        signIn.style.display = 'none';
+        login.style.display = 'block';
+    }
+    cancel.onclick = function () {
+        login.style.display = 'none';
+        signIn.style.display = 'block';
+    }
+</script>
+
+</html>
