@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0px;
+        margin: 0px;
+        list-style: none;
+    }
+
+    body {
+        background-image: url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimage.biaobaiju.com%2Fuploads%2F20191103%2F16%2F1572771163-ABdNSGixpr.jpg&refer=http%3A%2F%2Fimage.biaobaiju.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1640502346&t=780fb168140ec5da3a76a3170960ad97);
+        background-repeat: no-repeat;
+        background-size: 100% 100vh;
+    }
+
+    #main {
+        height: 80vh;
+        width: 50%;
+        color: white;
+        background-color: black;
+        margin: auto;
+        position: relative;
+    }
+
+    #fj {
+        text-align: center;
+        display: inline-block;
+        position: relative;
+        left: 50%;
+        bottom: -96%;
+    }
+</style>
+
+<body>
+    <div id="main">
+        <div id="fj">
+            <span>飞机</span>
+        </div>
+    </div>
+</body>
+
+<script>
+    var fj = document.getElementById('fj');
+    document.onkeydown = keyDown;
+    function keyDown(event) {
+        var event = event || window.event;
+        switch (event.keyCode) {
+            case 37:
+                fj.style.left = fj.offsetLeft - 5 + "px";
+                break;
+            case 39:
+                fj.style.left = fj.offsetLeft + 5 + "px";
+                break;
+            case 38:
+                fj.style.top = fj.offsetTop - 5 + "px";
+                break;
+            case 40:
+                fj.style.top = fj.offsetTop + 5 + "px";
+                break;
+        }
+        return false
+    }
+</script>
+
+<script>
+    var fj = document.getElementById('fj');
+    var main = document.getElementById('main');
+
+</script>
+
+</html>
