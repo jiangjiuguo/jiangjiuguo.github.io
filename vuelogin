@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!-- import CSS -->
+		<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+		<!-- import Vue before Element -->
+		<script src="https://unpkg.com/vue/dist/vue.js"></script>
+		<!-- import JavaScript -->
+		<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+	</head>
+	<style>
+		.main {
+			padding: 60px;
+			display: inline-block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin: -188.5px 0px 0px -188.5px;
+			box-shadow: 0px 0px 10px #000000;
+			border-radius: 10px;
+			text-align: center;
+		}
+	</style>
+	<body>
+		<div id="app">
+			<div class="main">
+				<h1>Login</h1>
+				<el-form ref="form" :model="ruleForm" label-width="40px" ref="ruleForm">
+					<el-form-item label="账号">
+						<el-input v-model="ruleForm.account" placeholder="请输入账号"></el-input>
+					</el-form-item>
+					<el-form-item label="密码">
+						<el-input v-model="ruleForm.password" placeholder="请输入密码" show-password></el-input>
+					</el-form-item>
+					<el-form-item>
+						<el-row>
+							<el-button type="primary" @click="open1" plain>登录</el-button>
+							<el-button type="info" plain>重置</el-button>
+						</el-row>
+					</el-form-item>
+					<hr>
+				</el-form>
+			</div>
+		</div>
+	</body>
+	<script>
+		new Vue({
+			el: '#app',
+			data: function() {
+				return {
+					ruleForm: {
+						account: '',
+						password: ''
+					}
+				}
+			},
+			methods: {
+				open1() {
+					if (this.ruleForm.account == '' && this.ruleForm.password == '') {
+						this.$message({
+							showClose: true,
+							message: '账号或密码不能为空!',
+							type: 'error'
+						});
+					}
+				}
+			}
+		})
+	</script>
+</html>
