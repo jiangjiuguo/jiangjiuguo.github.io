@@ -17,7 +17,7 @@
 			top: 50%;
 			left: 50%;
 			margin: -188.5px 0px 0px -188.5px;
-			box-shadow: 0px 0px 10px #000000;
+			box-shadow: 0px 0px 8px #000000;
 			border-radius: 10px;
 			text-align: center;
 		}
@@ -26,11 +26,11 @@
 		<div id="app">
 			<div class="main">
 				<h1>Login</h1>
-				<el-form ref="form" :model="ruleForm" label-width="40px" ref="ruleForm">
-					<el-form-item label="账号">
+				<el-form ref="form" :model="ruleForm" label-width="55px" ref="ruleForm">
+					<el-form-item label="账号" prop="account" :rules="[{ required: true, message: '账号不能为空'}]">
 						<el-input v-model="ruleForm.account" placeholder="请输入账号"></el-input>
 					</el-form-item>
-					<el-form-item label="密码">
+					<el-form-item label="密码" prop="password" :rules="[{ required: true, message: '密码不能为空'}]">
 						<el-input v-model="ruleForm.password" placeholder="请输入密码" show-password></el-input>
 					</el-form-item>
 					<el-form-item>
@@ -60,7 +60,19 @@
 					if (this.ruleForm.account == '' && this.ruleForm.password == '') {
 						this.$message({
 							showClose: true,
-							message: '账号或密码不能为空!',
+							message: '账号或密码不能为空😅',
+							type: 'warning'
+						});
+					} else if (this.ruleForm.account == 'admin' && this.ruleForm.password == '123456') {
+						this.$message({
+							showClose: true,
+							message: '登录成功👍',
+							type: 'success'
+						});
+					} else {
+						this.$message({
+							showClose: true,
+							message: '账号或密码错误😱',
 							type: 'error'
 						});
 					}
